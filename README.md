@@ -1,496 +1,366 @@
-# 🚀 Hack the Future 26
-## Team Repository Guide
+# 🤖 AI Conversation Studio
 
-Welcome to the official GitHub repository for **Team `HTF26-014-IdeaX`**.
+> A modern AI-powered conversation platform built with **FastAPI**, **SQLite**, and a clean web interface. Create, manage, and interact with AI conversations through a fast, responsive, and easy-to-use application.
 
-This repository is your team's workspace for developing and submitting your Hack the Future 26 project.
-
-You will use this repository to:
-
-- Store your project code
-- Work together with your teammates
-- Keep track of changes
-- Review each other's work
-- Submit your final project
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688?style=for-the-badge&logo=fastapi)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
 ---
 
-# 🔐 Important: How This Repository Works
+# 📌 Overview
 
-The `main` branch is **protected**.
+AI Conversation Studio is a lightweight yet powerful conversational AI platform designed to provide a seamless chatting experience.
 
-This means:
+The project combines a **FastAPI backend**, **SQLite database**, and an intuitive frontend into a single application, allowing developers to quickly run, test, and extend AI chat functionality without complex setup.
 
-> **You cannot directly push your changes to `main`.**
+The entire application is served from one FastAPI server, making deployment simple and efficient.
 
-Don't worry. This is intentional and helps prevent someone from accidentally breaking the team's main code.
+---
 
-Instead, everyone should work on their **own branch** and then create a **Pull Request**.
+## Run it (3 steps)
 
-The basic workflow is:
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --port 8000
+```
 
-```text
-Create a branch
-      ↓
-Make your changes
-      ↓
-Save your changes
-      ↓
-Push your branch
-      ↓
-Create a Pull Request
-      ↓
-Another teammate reviews it
-      ↓
-1 approval required
-      ↓
-Merge into main
-Think of main as the team's safe and stable version of the project.
+# ✨ Features
 
-🟢 1. Start Working on the Project
+- 💬 AI-powered conversation interface
+- ⚡ FastAPI backend
+- 🗄 SQLite database integration
+- 🎨 Clean and responsive UI
+- 📜 Conversation history management
+- 🔄 RESTful API architecture
+- 🚀 Single-server deployment
+- 📱 Mobile-friendly interface
+- 🔒 Modular backend structure
+- 🛠 Easy to customize and extend
 
-When you open the repository, you will see options such as:
+---
 
-Code
-Issues
-Pull requests
-Actions
+# 🏗 Project Structure
 
-You normally do not need to change anything in the repository settings.
-
-The organizers have already configured the repository rules.
-
-🌿 2. Create Your Own Branch
-
-A branch is your own working area inside the repository.
-
-For example:
-
-main
+```
+AI-Conversation-Studio/
 │
-├── feature-login
-├── feature-ai-model
-├── fix-camera
-└── docs-readme
-
-You work on your branch instead of directly changing main.
-
-🖱️ Method A: Using GitHub Website
-
-This is the easiest method if you are new to Git.
-
-Step 1
-
-Open the repository on GitHub.
-
-Click the branch selector near the top of the file list.
-
-You will see something similar to:
-
-main ▼
-Step 2
-
-Type the name of your new branch.
-
-Example:
-
-feature-login
-
-Step 3
-
-GitHub will show an option similar to:
-
-Create branch: feature-login from main
-
-Click it.
-
-🎉 Your branch has now been created.
-
-💻 Method B: Using Git
-
-If you are using Git on your computer:
-
-git checkout -b feature-login
-
-Then check your current branch:
-
-git branch
-
-You should see:
-
-* feature-login
-  main
-
-The * means you are currently working on feature-login.
-
-🛠️ 3. Make Your Changes
-
-Now work normally.
-
-You can:
-
-Add files
-Edit files
-Delete files
-Add features
-Fix bugs
-Improve documentation
-
-Your changes are happening on your branch, not directly on main.
-
-💾 4. Save Your Changes
-
-There are two ways to save your work to GitHub.
-
-🖱️ Method A: Using GitHub Website
-
-If you are creating or editing a file directly on GitHub:
-
-Open the file.
-Click the pencil/Edit button.
-Make your changes.
-Scroll down to the commit section.
-Enter a short description.
-
-Example:
-
-Add login page
-Choose:
-
-Create a new branch for this commit and start a pull request
-
-Click Propose changes.
-
-Your changes will now be saved to a branch.
-
-💻 Method B: Using Git
-
-After changing files on your computer:
-
-git add .
-
-Create a commit:
-
-git commit -m "Add login page"
-
-A commit is basically a saved checkpoint of your work.
-
-⬆️ 5. Push Your Branch to GitHub
-
-If you are using Git locally:
-
-git push origin feature-login
-
-Your branch will now appear on GitHub.
-
-If you are using the GitHub website, you do not need this step.
-
-🔀 6. Create a Pull Request
-
-A Pull Request, usually called a PR, means:
-
-"I finished my changes. Can someone check them before they become part of main?"
-
-🖱️ Creating a PR from GitHub
-
-After pushing your branch, GitHub may show:
-
-Compare & pull request
-
-Click it.
-
-If you don't see it:
-
-Open Pull requests.
-Click New pull request.
-Select:
-base: main
-compare: your-branch
-
-Example:
-
-base: main
-compare: feature-login
-Add a clear title
-
-Good:
-
-Add user login system
-
-Bad:
-
-changes
-Explain what you did
-
-Example:
-
-## What I changed
-
-- Added login page
-- Added email validation
-- Added logout button
-
-## Testing
-
-- Tested login with valid credentials
-- Tested invalid password
-
-Then click:
-
-Create pull request
-
-👀 7. Ask a Teammate to Review
-
-Your Pull Request needs to be checked.
-
-Our repository requires:
-
-At least 1 approval before merging.
-
-A teammate should check:
-
-Does the code work?
-Does the feature do what it should?
-Is anything broken?
-Is the code understandable?
-Are there unnecessary changes?
-Are passwords or API keys accidentally included?
-
-If everything looks good, the reviewer can click:
-
-Approve
-
-💬 8. What If the Reviewer Finds a Problem?
-
-Don't worry.
-
-You do not need to create another Pull Request.
-
-Make the required changes on the same branch.
-
-For example:
-
-Reviewer:
-"Please fix the login validation."
-
-        ↓
-
-You fix it
-
-        ↓
-
-Commit the change
-
-        ↓
-
-Push the branch
-
-        ↓
-
-The existing PR automatically updates
-
-The reviewer can then check the new changes.
-
-✅ 9. Merge the Pull Request
-
-Once the Pull Request has received the required approval:
-
-Check that the required approval is present.
-Check that there are no important problems.
-Click Merge pull request.
-Confirm the merge.
-
-The repository allows:
-
-Merge commit
-Squash and merge
-Rebase and merge
-
-If your team isn't sure which one to use, Squash and merge is a simple choice for many small hackathon changes.
-
-🚫 10. Don't Push Directly to Main
-
-Do not try to push directly to main.
-
-For example, this is not allowed:
-
-git push origin main
-
-Instead:
-
-Create branch
-      ↓
-Make changes
-      ↓
-Pull Request
-      ↓
-1 teammate approves
-      ↓
-Merge
-
-This protects everyone's work.
-
-🔥 11. Never Force-Push to Main
-
-Do not try to force-push to main.
-
-Avoid:
-
-git push --force
-
-The protected main branch is designed to prevent this.
-
-🔑 12. NEVER Upload Passwords or API Keys
-
-Very important.
-
-Never put these inside your repository:
-
-API keys
-Passwords
-Access tokens
-Private keys
-Database passwords
-.env files containing real secrets
-
-For example, do NOT commit:
-
-API_KEY=123456789abcdef
-
-inside a public repository.
-
-If you accidentally upload a secret:
-
-Tell the organizers immediately.
-
-Simply deleting the file may not be enough because the secret could still exist in Git history.
-
-📁 13. Keep the Repository Organized
-
-Try to keep the project clean.
-
-For example:
-
-project/
+├── backend/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── routes/
+│   ├── static/
+│   ├── templates/
+│   ├── requirements.txt
+│   └── ...
 │
-├── src/
-├── docs/
-├── tests/
 ├── README.md
-├── requirements.txt
-└── .gitignore
+└── LICENSE
+```
 
-Don't upload unnecessary files such as:
+---
 
-Huge videos
-Temporary files
-Build files
-Personal files
-Passwords
-IDE-specific junk
+# 🛠 Tech Stack
 
-Use .gitignore where appropriate.
+### Backend
+- Python
+- FastAPI
+- SQLite
+- Uvicorn
 
-🏷️ 14. Use Clear Branch Names
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-Good examples:
+### Database
+- SQLite
 
-feature-login
-feature-chatbot
-feature-dashboard
-fix-payment-error
-fix-camera-bug
-docs-installation
+---
 
-Avoid names such as:
+# ⚙ Installation
 
-test
-abc
-new
-branch1
-mybranch
-asdf
+## 1. Clone Repository
 
-A clear branch name makes teamwork easier.
+```bash
+git clone https://github.com/iamarchitshah/AI-Conversation-Studio.git
 
-📝 15. Use Clear Commit Messages
+cd AI-Conversation-Studio/backend
+```
 
-A commit message should tell your teammates what you changed.
+---
 
-Good
-Add login page
-Fix camera initialization
-Add chatbot API
-Update project documentation
-Avoid
-changes
-update
-done
-final
-final2
-final-final
+## 2. Install Dependencies
 
-Keep commit messages short and meaningful.
+```bash
+pip install -r requirements.txt
+```
 
-🧑‍💻 16. Recommended Team Workflow
+---
 
-For every new feature:
+## 3. Run Server
 
-1. Start from main
-        ↓
-2. Create a new branch
-        ↓
-3. Work on the feature
-        ↓
-4. Commit your changes
-        ↓
-5. Push the branch
-        ↓
-6. Create Pull Request
-        ↓
-7. Teammate reviews
-        ↓
-8. Get 1 approval
-        ↓
-9. Merge into main
-        ↓
-10. Start the next feature
-🆘 17. If You Get Stuck
-GitHub says your push was rejected
+```bash
+uvicorn main:app --port 8000
+```
 
-Check that you are not trying to push directly to main.
+---
 
-Create a branch instead.
+## 4. Open Browser
 
-Your Pull Request cannot be merged
+Visit
 
-Check whether:
+```
+http://localhost:8000
+```
 
-You have the required approval.
-There are merge conflicts.
-GitHub is showing another problem.
-You accidentally committed a secret
+That's it!
 
-Tell the organizers immediately.
+No separate frontend server required.
 
-You don't understand Git
+---
 
-That's okay.
+# ☁️ Deploy to AWS EKS (Kubernetes)
 
-Ask your teammates or the Hack the Future 26 organizers for help.
+Deploy AI Conversation Studio to Amazon EKS with persistent SQLite storage via EBS volumes.
 
-🏆 Hack the Future 26
+## Prerequisites
 
-Build together. Review together. Ship together.
+- [AWS CLI](https://aws.amazon.com/cli/) installed & configured (`aws configure`)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) installed
+- [Docker](https://docs.docker.com/get-docker/) installed
+- An [AWS account](https://aws.amazon.com/) with sufficient permissions
 
-Keep main stable.
+## Step 1 — Create EKS Cluster
 
-Work in branches.
+If you don't have an EKS cluster yet, create one using `eksctl`:
 
-Use Pull Requests.
+```bash
+eksctl create cluster \
+  --name ai-conversation-studio \
+  --region us-east-1 \
+  --nodegroup-name standard-workers \
+  --node-type t3.medium \
+  --nodes 2 \
+  --nodes-min 2 \
+  --nodes-max 4 \
+  --managed
+```
 
-Get your teammate's approval.
+> ⏱ This takes ~15 minutes. While it runs, proceed to Step 2 in parallel.
 
-Then merge.
+## Step 2 — Create ECR Repository
 
-Happy hacking! 🚀
+```bash
+aws ecr create-repository \
+  --repository-name ai-conversation-studio \
+  --region us-east-1
+```
+
+## Step 3 — Build & Push Docker Image
+
+```bash
+chmod +x scripts/build-and-push.sh
+scripts/build-and-push.sh <YOUR_AWS_ACCOUNT_ID> us-east-1
+```
+
+**Example:** `scripts/build-and-push.sh 123456789012 us-east-1`
+
+## Step 4 — Update Deployment Image
+
+Edit `k8s/deployment.yaml` and replace `<YOUR_AWS_ACCOUNT_ID>` and `<REGION>` with your actual values:
+
+```yaml
+image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/ai-conversation-studio:latest
+```
+
+## Step 5 — Deploy to EKS
+
+```bash
+kubectl config use-context <your-eks-cluster-context>
+chmod +x scripts/deploy-eks.sh
+scripts/deploy-eks.sh <YOUR_AWS_ACCOUNT_ID> us-east-1
+```
+
+Or manually apply all manifests:
+
+```bash
+kubectl apply -f k8s/namespace.yaml
+kubectl apply -f k8s/configmap.yaml
+kubectl apply -f k8s/pvc.yaml
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/hpa.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+## Step 6 — Verify
+
+```bash
+# Check pods
+kubectl get pods -n ai-conversation-studio
+
+# Get the LoadBalancer URL
+kubectl get svc -n ai-conversation-studio ai-conversation-studio-service \
+  -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+```
+
+Open the returned URL in your browser — you should see the AI Conversation Studio UI.
+
+## Kubernetes Architecture
+
+| Resource | Description |
+|----------|-------------|
+| `Namespace` | Isolated namespace `ai-conversation-studio` |
+| `Deployment` | 2 replicas (auto-scales 2–10), with health probes |
+| `Service` | AWS LoadBalancer (port 80 → container 8000) |
+| `PVC` | 1Gi EBS `gp3` volume for SQLite persistence |
+| `ConfigMap` | App configuration (`DB_PATH`, etc.) |
+| `HPA` | Auto-scale on CPU (70%) and memory (80%) |
+
+## Important Notes
+
+- **Data Persistence:** SQLite database is stored on a PVC backed by AWS EBS (`gp3`). Data survives pod restarts but is **tied to a single AZ**. For multi-AZ HA, migrate to Amazon RDS (PostgreSQL).
+- **No Rolling Updates Data Loss:** Because SQLite is a file-based DB, rolling updates work fine — the new pod mounts the same PVC.
+- **Backup**: Periodically backup the PVC. Example:
+  ```bash
+  kubectl exec -n ai-conversation-studio deployment/ai-conversation-studio -- \
+    sh -c "cp /data/studio.db /data/studio-$(date +%Y%m%d).db"
+  ```
+
+---
+
+# 🚀 API Endpoints
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | / | Home Page |
+| GET | /docs | Swagger Documentation |
+| POST | /chat | AI Conversation |
+| GET | /history | Conversation History |
+| POST | /conversation | Create Conversation |
+| DELETE | /conversation/{id} | Delete Conversation |
+
+> Endpoints may vary depending on your implementation.
+
+---
+
+
+---
+
+# 📦 Dependencies
+
+- FastAPI
+- Uvicorn
+- SQLite
+- Pydantic
+- Python 3.10+
+
+Install with
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 💡 Future Improvements
+
+- User Authentication
+- Multiple AI Models
+- Dark Mode
+- File Upload Support
+- Voice Input
+- Streaming Responses
+- Export Conversations
+- Markdown Rendering
+- Docker Support
+- Cloud Deployment
+
+---
+
+# 🧪 Development
+
+Run with auto reload
+
+```bash
+uvicorn main:app --reload
+```
+
+---
+
+# 📖 API Documentation
+
+FastAPI automatically generates documentation.
+
+Swagger UI
+
+```
+http://localhost:8000/docs
+```
+
+ReDoc
+
+```
+http://localhost:8000/redoc
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+
+2. Create a feature branch
+
+```bash
+git checkout -b feature/NewFeature
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added New Feature"
+```
+
+4. Push branch
+
+```bash
+git push origin feature/NewFeature
+```
+
+5. Open a Pull Request
+
+---
+
+# ⭐ Support
+
+If you found this project useful,
+
+⭐ Star this repository
+
+🍴 Fork it
+
+🛠 Contribute to it
+
+---
+
+# 👨‍💻 Author
+
+**Archit Shah**
+
+GitHub:
+https://github.com/iamarchitshah
+
+---
+
+## ❤️ Thank You
+
+Thank you for visiting this project.
+
+If you like it, don't forget to leave a ⭐ on GitHub!
